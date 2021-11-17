@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 
-import { ChakraProvider, Container, Flex } from '@chakra-ui/react';
+import { Box, ChakraProvider, Container, Flex } from '@chakra-ui/react';
 import React from 'react';
 
 import SideMenu from '../components/menu/sideMenu';
@@ -11,10 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Flex w="100%">
+        <Box>
         <SideMenu />
-        <Container mx="auto">
+        </Box>
+        <Box w="100%">
           <Component {...pageProps} />
-        </Container>
+        </Box>
       </Flex>
     </ChakraProvider>)
 
